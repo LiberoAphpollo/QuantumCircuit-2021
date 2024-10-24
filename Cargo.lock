@@ -404,6 +404,12 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "0ce7134b9999ecaf8bcd65542e436736ef32ddca1b3e06094cb6ec5755203b80"
 
 [[package]]
+name = "foldhash"
+version = "0.1.3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "f81ec6369c545a7d40e4589b5597581fa1c441fe1cce96dd1de43159910a36a2"
+
+[[package]]
 name = "gemm"
 version = "0.18.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -579,6 +585,12 @@ name = "hashbrown"
 version = "0.15.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "1e087f84d4f86bf4b218b927129862374b72199ae7d8657835f1e89000eea4fb"
+dependencies = [
+ "allocator-api2",
+ "equivalent",
+ "foldhash",
+ "rayon",
+]
 
 [[package]]
 name = "heck"
@@ -1127,7 +1139,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "3d922163ba1f79c04bc49073ba7b32fd5a8d3b76a87c955921234b8e77333c51"
 dependencies = [
  "cfg-if",
- "hashbrown 0.14.5",
+ "hashbrown 0.12.3",
  "indexmap",
  "indoc",
  "libc",
@@ -1197,7 +1209,7 @@ dependencies = [
  "bytemuck",
  "faer",
  "faer-ext",
- "hashbrown 0.14.5",
+ "hashbrown 0.15.0",
  "indexmap",
  "itertools 0.13.0",
  "ndarray",
@@ -1226,7 +1238,7 @@ dependencies = [
  "ahash 0.8.11",
  "approx 0.5.1",
  "bytemuck",
- "hashbrown 0.14.5",
+ "hashbrown 0.15.0",
  "indexmap",
  "itertools 0.13.0",
  "ndarray",
@@ -1254,7 +1266,7 @@ dependencies = [
 name = "qiskit-qasm2"
 version = "1.3.0"
 dependencies = [
- "hashbrown 0.14.5",
+ "hashbrown 0.15.0",
  "num-bigint",
  "pyo3",
  "qiskit-circuit",
@@ -1265,7 +1277,7 @@ name = "qiskit-qasm3"
 version = "1.3.0"
 dependencies = [
  "ahash 0.8.11",
- "hashbrown 0.14.5",
+ "hashbrown 0.15.0",
  "indexmap",
  "oq3_semantics",
  "pyo3",
